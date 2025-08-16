@@ -79,7 +79,7 @@ data:
     no-autoupdate: true
 
     ingress:
-    - hostname: ldpi.abdul.shukor.org
+    - hostname: ldpi.abdulshukor.org
       service: http://linkding:9090
 
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
