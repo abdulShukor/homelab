@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
-      version: "66.2.2"
+      version: "76.4.0"
 
       # version: "58.x"
 
@@ -30,4 +30,4 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
-      adminPassword: 4101
+      adminPassword: abdul
