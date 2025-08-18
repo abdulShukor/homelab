@@ -36,8 +36,8 @@ spec:
         ingressClassName: traefik
         hosts:
            - grs.abdulshukor.org
-        tls: []
-        # - secretName: grafana-general-tls
-        #   hosts:
-        #   - grafana.example.com
+        tls:
+         - secretName: grafana-tls-secret
+           hosts:
+           - grs.abdulshukor.org
 
