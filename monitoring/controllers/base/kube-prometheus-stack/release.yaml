@@ -10,7 +10,7 @@ spec:
       chart: kube-prometheus-stack
       version: "76.4.0"
 
-      # version: "58.x"
+        # version: "58.x"
 
       sourceRef:
         kind: HelmRepository
@@ -31,3 +31,31 @@ spec:
   values:
     grafana:
       adminPassword: abdul
+      ingress:                                                                                                                      
+          ## If true, Grafana Ingress will be created
+          ##
+          enabled: true
+         
+          ## IngressClassName for Grafana Ingress.
+          ## Should be provided if Ingress is enable.
+            ##
+             ingressClassName: traefik
+           
+            ## Annotations for Grafana Ingress
+            ##
+           
+            ## Hostnames.
+            ## Must be provided if Ingress is enable.
+            ##
+             hosts:
+               - grs.abdulshukor.org
+           
+           
+            ## TLS configuration for grafana Ingress
+            ## Secret must be manually created in the namespace
+            ##
+            tls: []
+            # - secretName: grafana-general-tls
+            #   hosts:
+            #   - grafana.example.com
+
